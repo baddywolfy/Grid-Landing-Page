@@ -44,3 +44,29 @@
   clip: rect(0,0,0,0);
   overflow: hidden;
 }
+
+@mixin button($bg:$second, $borderColor: transparent) {
+  border-radius: 5px;
+  background-color: $bg;
+  border: 2px solid $borderColor;
+  width: 170px;
+  height: 54px;
+  font-size: 14px;
+  font-family: 'Raleway';
+  color: $white;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  cursor:ponter;
+  box-shadow: none;
+  appearance: none;
+  transition-property: background-color, border-color;
+  transition-duration: 500ms;
+  @content;
+
+  &:hover, &:active {
+    background-color: darken($bg, 15%);
+    border-color: darken($bg, 15%);
+  }
+}

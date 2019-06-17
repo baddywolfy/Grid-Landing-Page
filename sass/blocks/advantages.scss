@@ -1,0 +1,34 @@
+$circleBg: #363636;
+
+.advantages__title {
+    @include visually-hidden;
+}
+
+.advantages__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+    grid-column-gap: 30px;
+}
+
+.advantages__item {
+    margin: 15px 0;
+}
+
+.advantages__img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: $circleBg;
+    border-radius: 50%;
+    position: relative;
+    width: 104px;
+    height: 104px;
+}
+
+.advantages__svg {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   height: 40px;
+   transform: translate(-50%, -50%); 
+}
